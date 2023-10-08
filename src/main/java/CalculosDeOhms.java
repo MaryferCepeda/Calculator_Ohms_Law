@@ -7,6 +7,10 @@
  *
  * @author HOGAR
  */
-public class CalculosDeOhms {
+public class CalculosDeOhms extends GUI {
+    float inputVoltaje, inputCoriente, inputIntensidad; 
     
+    public
+            
 }
+
