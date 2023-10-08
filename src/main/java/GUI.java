@@ -148,22 +148,28 @@ public class GUI extends javax.swing.JFrame {
 
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
         // TODO add your handling code here:
-        CalculosDeOhms ohm= new CalculosDeOhms(); 
-        voltaje=Float.parseFloat(inputVoltaje.getText()); 
-        corriente=Float.parseFloat(inputCorriente.getText()); 
-        intensidad=Float.parseFloat(inputIntensidad.getText()); 
-        if (voltaje==0 && corriente>0 || intensidad>0 ){
-            voltaje=ohm.calcularVoltaje(corriente,intensidad);    
-            pantalla.setText("Voltaje "+voltaje );
-        }else if (corriente==0 && voltaje>0 || intensidad>0){
-            corriente=ohm.calcularCorriente(voltaje, intensidad); 
-            pantalla.setText("Corriente "+ corriente );
-        }else if(intensidad==0 && corriente>0 || voltaje>0){
-            intensidad=ohm.calcularIntensidad(voltaje, corriente);
-            pantalla.setText("Intensidad "+intensidad );
-        }else{  
-            pantalla.setText("No hay nada para calcular");
-        }
+        
+        try{
+            CalculosDeOhms ohm= new CalculosDeOhms(); 
+            voltaje=Float.parseFloat(inputVoltaje.getText()); 
+            corriente=Float.parseFloat(inputCorriente.getText()); 
+            intensidad=Float.parseFloat(inputIntensidad.getText()); 
+            if (voltaje==0 && corriente>0 && intensidad>0){
+                voltaje=ohm.calcularVoltaje(corriente,intensidad);    
+         
+                pantalla.setText("Voltaje "+voltaje );
+            }else if (corriente==0 && voltaje>0 && intensidad>0){
+                corriente=ohm.calcularCorriente(voltaje, intensidad); 
+                pantalla.setText("Corriente "+ corriente );
+            }else if(intensidad==0 && corriente>0 && voltaje>0){
+                intensidad=ohm.calcularIntensidad(voltaje, corriente);
+                pantalla.setText("Intensidad "+intensidad );
+            }else{  
+                pantalla.setText("No hay nada para calcular");
+            }
+            }catch(NumberFormatException e){
+               pantalla.setText("Ingrese un valor.\n O un cero si es el caso " + e);
+            }
         
         
         
