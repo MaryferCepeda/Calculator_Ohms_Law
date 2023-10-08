@@ -8,7 +8,7 @@
  * @author HOGAR
  */
 public class GUI extends javax.swing.JFrame {
-    
+    float corriente, voltaje, intensidad; 
     /**
      * Creates new form GUI
      */
@@ -39,6 +39,11 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Calcular.setText("Calcular");
+        Calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalcularActionPerformed(evt);
+            }
+        });
 
         borrar.setText("Borrar");
         borrar.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +145,11 @@ public class GUI extends javax.swing.JFrame {
         inputCorriente.setText("");
         inputIntensidad.setText(""); 
     }//GEN-LAST:event_borrarActionPerformed
+
+    private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
+        // TODO add your handling code here:
+        corriente=Float.parseFloat(inputVoltaje.getText()); 
+    }//GEN-LAST:event_CalcularActionPerformed
 
     /**
      * @param args the command line arguments
