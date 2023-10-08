@@ -12,25 +12,25 @@ import javax.swing.JTextField;
  */
 public class CalculosDeOhms{
     float vol, cor, inten;  
-    
+    float calVol, calCor, calInten;
     float calcularVoltaje(float cor, float inten){
         this.cor=cor; 
         this.inten=inten;
-        vol=cor*inten; 
-        return vol; 
+        calVol=cor*inten;
+        return calVol;
     }
     
     float calcularCorriente(float vol, float inten){ 
         this.vol=vol; 
         this.inten=inten; 
-        cor=vol/inten; 
-        return cor; 
+        calCor=vol/inten;
+        return calCor;
     }
     float calcularIntensidad(float vol, float cor){
         this.vol=vol; 
         this.cor=cor; 
-        inten=vol/cor; 
-        return inten; 
+        calInten=vol/cor;
+        return calInten;
     }
     
             
