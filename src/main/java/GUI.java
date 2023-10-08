@@ -148,7 +148,10 @@ public class GUI extends javax.swing.JFrame {
 
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
         // TODO add your handling code here:
-        corriente=Float.parseFloat(inputVoltaje.getText()); 
+        voltaje=Float.parseFloat(inputVoltaje.getText()); 
+        corriente=Float.parseFloat(inputCorriente.getText()); 
+        intensidad=Float.parseFloat(inputIntensidad.getText()); 
+        
     }//GEN-LAST:event_CalcularActionPerformed
 
     /**
