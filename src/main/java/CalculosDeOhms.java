@@ -33,6 +33,7 @@ public class CalculosDeOhms{
         return calInten;
     }
     
+    
             
 }
 
